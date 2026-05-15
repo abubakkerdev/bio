@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Abu Bakker Siddik — Professional Bio Data</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy: #0b1120;
+    --navy-mid: #111827;
+    --navy-soft: #1a2640;
+    --teal: #0ea5a0;
+    --teal-light: #5eead4;
+    --gold: #d4a853;
+    --gold-light: #f0c97a;
+    --white: #f8fafc;
+    --muted: #94a3b8;
+    --border: rgba(14,165,160,0.18);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  /* ── PAGE WRAPPER ── */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--navy-mid);
+    box-shadow: 0 0 80px rgba(0,0,0,0.6);
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, #0b1120 0%, #0f1e36 60%, #122535 100%);
+    padding: 52px 56px 44px;
+    border-bottom: 2px solid var(--teal);
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(14,165,160,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 40px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,168,83,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .name-block h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+  }
+  .name-block h1 span {
+    color: var(--teal-light);
+  }
+  .name-block .title {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+
+  .contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    text-align: right;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .contact-block a {
+    color: var(--teal-light);
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .contact-block a:hover { color: var(--gold-light); }
+  .contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+  .contact-row .label {
+    color: var(--muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .divider-dot {
+    width: 4px; height: 4px;
+    background: var(--teal);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+  }
+
+  /* ── BODY ── */
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    background: var(--navy-soft);
+    padding: 40px 28px;
+    border-right: 1px solid var(--border);
+  }
+
+  /* ── MAIN CONTENT ── */
+  .main {
+    padding: 40px 44px;
+  }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 34px; }
+  .section:last-child { margin-bottom: 0; }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid var(--teal);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-shadow: 0 0 12px rgba(94,234,212,0.4);
+  }
+  .section-title::before {
+    content: '';
+    width: 16px; height: 2px;
+    background: var(--teal-light);
+    flex-shrink: 0;
+  }
+
+  /* ── OBJECTIVE ── */
+  .objective-text {
+    font-size: 0.88rem;
+    color: #cbd5e1;
+    line-height: 1.78;
+    font-weight: 300;
+  }
+
+  /* ── EXPERIENCE ── */
+  .exp-item {
+    margin-bottom: 26px;
+    padding-left: 16px;
+    border-left: 2px solid var(--teal);
+    position: relative;
+  }
+  .exp-item::before {
+    content: '';
+    position: absolute;
+    left: -5px; top: 6px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--teal);
+    box-shadow: 0 0 0 2px var(--navy-mid);
+  }
+  .exp-role {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 2px;
+  }
+  .exp-company {
+    font-size: 0.78rem;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 2px;
+    letter-spacing: 0.4px;
+  }
+  .exp-company a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+  .exp-company a:hover { color: var(--gold-light); text-decoration: underline; }
+  .exp-meta {
+    font-size: 0.73rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+    font-family: 'DM Mono', monospace;
+  }
+  .exp-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .exp-bullets li {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .exp-bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-size: 0.7rem;
+    top: 1px;
+  }
+
+  /* ── PROJECTS ── */
+  .project-item {
+    background: rgba(14,165,160,0.06);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+  }
+  .project-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--teal-light);
+    margin-bottom: 6px;
+  }
+  .project-name a {
+    color: var(--teal-light);
+    text-decoration: none;
+  }
+  .project-name a:hover { text-decoration: underline; }
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 8px;
+  }
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.67rem;
+    background: rgba(14,165,160,0.15);
+    color: var(--teal-light);
+    border: 1px solid rgba(14,165,160,0.3);
+    border-radius: 4px;
+    padding: 2px 7px;
+    letter-spacing: 0.3px;
+  }
+  .project-desc {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.6;
+  }
+
+  /* ── SIDEBAR SKILLS ── */
+  .skill-group { margin-bottom: 22px; }
+  .skill-group-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: #cbd5e1;
+  }
+  .skill-dot {
+    width: 6px; height: 6px;
+    background: var(--teal);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── PERSONAL INFO (sidebar) ── */
+  .info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 12px;
+  }
+  .info-label {
+    font-size: 0.67rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+  }
+  .info-value {
+    font-size: 0.82rem;
+    color: var(--white);
+    font-weight: 400;
+  }
+  .info-value a {
+    color: var(--teal-light);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .info-value a:hover { text-decoration: underline; }
+
+  /* ── EDUCATION ── */
+  .edu-item {
+    background: rgba(212,168,83,0.05);
+    border-left: 2px solid var(--gold);
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 10px;
+  }
+  .edu-degree {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--white);
+  }
+  .edu-institution {
+    font-size: 0.78rem;
+    color: var(--gold);
+    margin-top: 2px;
+    font-weight: 500;
+  }
+  .edu-year {
+    font-size: 0.72rem;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    margin-top: 3px;
+  }
+
+  /* ── LANGUAGES ── */
+  .lang-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .lang-name {
+    font-size: 0.82rem;
+    color: var(--white);
+  }
+  .lang-level {
+    display: flex;
+    gap: 4px;
+  }
+  .lang-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    border: 1px solid var(--teal);
+  }
+  .lang-dot.filled { background: var(--teal); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--navy);
+    border-top: 1px solid var(--border);
+    padding: 22px 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .declaration-text {
+    font-size: 0.76rem;
+    color: var(--muted);
+    font-style: italic;
+    max-width: 560px;
+    line-height: 1.6;
+  }
+  .signature {
+    text-align: right;
+  }
+  .signature .sig-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--teal-light);
+    border-bottom: 1px solid var(--teal);
+    padding-bottom: 4px;
+  }
+  .signature .sig-label {
+    font-size: 0.68rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <div class="name-block">
+        <h1>Abu Bakker <span>Siddik</span></h1>
+        <div class="title">Full Stack Developer &nbsp;·&nbsp; MERN Specialist</div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-row">
+          <span class="label">Phone</span>
+          <span>+880 1630-555407</span>
+        </div>
+        <div class="contact-row">
+          <span class="label">Email</span>
+          <a href="mailto:mdababukker563@gmail.com">mdababukker563@gmail.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="label">GitHub</span>
+          <a href="https://github.com/abubakkerdev" target="_blank">github.com/abubakkerdev</a>
+        </div>
+        <div class="contact-row">
+          <span class="label">Location</span>
+          <span>Board Bazar, Gazipur, Bangladesh</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- Personal Info -->
+      <div class="section">
+        <div class="section-title">Personal</div>
+        <div class="info-row">
+          <span class="info-label">Date of Birth</span>
+          <span class="info-value">20 January 2002</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Gender</span>
+          <span class="info-value">Male</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Marital Status</span>
+          <span class="info-value">Unmarried</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Nationality</span>
+          <span class="info-value">Bangladeshi</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Religion</span>
+          <span class="info-value">Islam</span>
+        </div>
+      </div>
+
+      <!-- Technical Skills -->
+      <div class="section">
+        <div class="section-title">Tech Stack</div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Backend</div>
+          <div class="skill-list">
+            <div class="skill-item"><div class="skill-dot"></div>Node.js</div>
+            <div class="skill-item"><div class="skill-dot"></div>Express.js</div>
+            <div class="skill-item"><div class="skill-dot"></div>REST API Design</div>
+            <div class="skill-item"><div class="skill-dot"></div>JWT Authentication</div>
+            <div class="skill-item"><div class="skill-dot"></div>Redis (Cache & Rate Limiting)</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Database</div>
+          <div class="skill-list">
+            <div class="skill-item"><div class="skill-dot"></div>MongoDB</div>
+            <div class="skill-item"><div class="skill-dot"></div>Mongoose ODM</div>
+            <div class="skill-item"><div class="skill-dot"></div>Redis</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Frontend</div>
+          <div class="skill-list">
+            <div class="skill-item"><div class="skill-dot"></div>React.js</div>
+            <div class="skill-item"><div class="skill-dot"></div>Next.js (App Router)</div>
+            <div class="skill-item"><div class="skill-dot"></div>Tailwind CSS</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Payments & Integrations</div>
+          <div class="skill-list">
+            <div class="skill-item"><div class="skill-dot"></div>Stripe Payment Gateway</div>
+            <div class="skill-item"><div class="skill-dot"></div>Google Pay</div>
+            <div class="skill-item"><div class="skill-dot"></div>Cloudinary (Media CDN)</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">DevOps & Tools</div>
+          <div class="skill-list">
+            <div class="skill-item"><div class="skill-dot"></div>Git & GitHub</div>
+            <div class="skill-item"><div class="skill-dot"></div>Deployment & Hosting</div>
+            <div class="skill-item"><div class="skill-dot"></div>Multi-language Setup</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="section">
+        <div class="section-title">Education</div>
+        <div class="edu-item">
+          <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
+          <div class="edu-institution">Uttara City College</div>
+          <div class="edu-year">Passed: 2020</div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="section">
+        <div class="section-title">Languages</div>
+        <div class="lang-item">
+          <span class="lang-name">Bangla</span>
+          <div class="lang-level">
+            <div class="lang-dot filled"></div>
+            <div class="lang-dot filled"></div>
+            <div class="lang-dot filled"></div>
+            <div class="lang-dot filled"></div>
+            <div class="lang-dot filled"></div>
+          </div>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">English</span>
+          <div class="lang-level">
+            <div class="lang-dot filled"></div>
+            <div class="lang-dot filled"></div>
+            <div class="lang-dot filled"></div>
+            <div class="lang-dot filled"></div>
+            <div class="lang-dot"></div>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <!-- Career Objective -->
+      <div class="section">
+        <div class="section-title">Career Objective</div>
+        <p class="objective-text">
+          Passionate and results-driven Full Stack Developer with a strong specialization in MERN Stack backend architecture. I bring hands-on experience building production-grade web applications, scalable REST APIs, payment gateway integrations, and restaurant management platforms for clients across Canada, Australia, and Bangladesh. With a background in teaching and real-world software delivery, I am committed to engineering secure, efficient, and high-performance systems — and continuously growing as a full-stack professional.
+        </p>
+      </div>
+
+      <!-- Professional Experience -->
+      <div class="section">
+        <div class="section-title">Professional Experience</div>
+
+        <!-- CREATIVE IT -->
+        <div class="exp-item">
+          <div class="exp-role">Assistant Teacher — Web Development</div>
+          <div class="exp-company"><a href="https://www.creativeitinstitute.com/" target="_blank">Creative IT Institute</a></div>
+          <div class="exp-meta">Dhaka, Bangladesh &nbsp;·&nbsp; 2+ Years &nbsp;·&nbsp; Current</div>
+          <ul class="exp-bullets">
+            <li>Delivered structured lessons on MERN Stack development to batches of students.</li>
+            <li>Mentored junior developers on Node.js, Express.js, MongoDB, and React.js best practices.</li>
+            <li>Designed project-based curriculum covering REST API design, authentication, and deployment.</li>
+            <li>Conducted code review sessions and provided feedback to improve student project quality.</li>
+          </ul>
+        </div>
+
+        <!-- ASKY AI -->
+        <div class="exp-item">
+          <div class="exp-role">Backend Developer</div>
+          <div class="exp-company"><a href="https://www.asky.ai/" target="_blank">Asky AI</a> &nbsp;·&nbsp; Australia (Remote)</div>
+          <div class="exp-meta">Australia Agency &nbsp;·&nbsp; Contract / Remote</div>
+          <ul class="exp-bullets">
+            <li>Built and maintained RESTful backend services for an AI-driven platform using Node.js and Express.js.</li>
+            <li>Developed secure API endpoints with JWT-based authentication and role-based access control.</li>
+            <li>Integrated third-party services and implemented Redis caching to optimize API performance.</li>
+            <li>Collaborated with cross-functional remote teams across different time zones.</li>
+          </ul>
+        </div>
+
+        <!-- JOMAA'S PIZZA -->
+        <div class="exp-item">
+          <div class="exp-role">Full Stack Developer (Sole Developer)</div>
+          <div class="exp-company"><a href="https://www.jomaaspizzacapilano.ca/" target="_blank">Jomaa's Pizza Capilano</a> &nbsp;·&nbsp; Canada (Remote)</div>
+          <div class="exp-meta">Canada Restaurant Platform &nbsp;·&nbsp; Ongoing</div>
+          <ul class="exp-bullets">
+            <li>Architected and built the entire software platform independently — from database to UI.</li>
+            <li>Developed online food ordering system with pizza, burgers, wings, and full menu management.</li>
+            <li>Integrated Stripe and Google Pay for seamless, secure online checkout.</li>
+            <li>Implemented real-time order tracking, kitchen notifications, and mobile-responsive design.</li>
+            <li>Deployed and continue to maintain the live production system for the Canadian restaurant.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Projects -->
+      <div class="section">
+        <div class="section-title">Key Projects</div>
+
+        <div class="project-item">
+          <div class="project-name">
+            <a href="https://www.jomaaspizzacapilano.ca/" target="_blank">🍕 Jomaa's Pizza — Restaurant Ordering Platform</a>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Stripe</span>
+            <span class="tag">Google Pay</span>
+            <span class="tag">Cloudinary</span>
+            <span class="tag">Redis</span>
+          </div>
+          <div class="project-desc">
+            A fully operational restaurant ordering system built end-to-end for a Canadian client. Features include full menu browsing (Pizza, Burgers, Wings, Drinks), cart management, Stripe + Google Pay payment processing, real-time order handling, admin dashboard, and a fully mobile-responsive frontend. Sole developer — designed, built, deployed, and maintained.
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-name">🛒 Full-Featured E-Commerce Platform</div>
+          <div class="project-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">React.js</span>
+            <span class="tag">Stripe</span>
+            <span class="tag">Google Pay</span>
+            <span class="tag">JWT Auth</span>
+          </div>
+          <div class="project-desc">
+            A scalable e-commerce backend with product catalog, user authentication, shopping cart, order management, and a secure multi-gateway checkout using Stripe and Google Pay. Includes admin panel for inventory and order tracking.
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- FOOTER / DECLARATION -->
+  <footer class="footer">
+    <div class="declaration-text">
+      I hereby declare that all information provided in this bio data is true, accurate, and correct to the best of my knowledge and belief.
+    </div>
+    <div class="signature">
+      <div class="sig-name">Abu Bakker Siddik</div>
+      <div class="sig-label">Date: May 2026</div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
